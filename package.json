@@ -1,24 +1,27 @@
 {
   "name": "eip-7702-demo",
   "version": "1.0.0",
-  "description": "EIP-7702 Account Abstraction Demo with Hardhat",
+  "description": "Demo of EIP-7702 using Gelato",
+  "main": "index.js",
   "scripts": {
-    "compile": "hardhat compile",
+    "test": "hardhat test",
     "deploy": "hardhat run scripts/deploy.ts --network sepolia",
-    "deploy:local": "hardhat run scripts/deploy.ts --network localhost",
-    "demo": "ts-node demo.ts",
-    "test": "hardhat test"
+    "demo": "hardhat run demo.ts --network sepolia",
+    "test-wallet": "hardhat run test.ts --network sepolia",
+    "debug": "hardhat run debug.ts --network sepolia"
   },
-  "dependencies": {
-    "dotenv": "^16.0.0",
-    "viem": "^2.21.0"
-  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
-    "@types/dotenv": "^6.1.1",
-    "@types/node": "^20.0.0",
-    "hardhat": "^2.22.0",
-    "ts-node": "^10.9.0",
-    "typescript": "^5.0.0"
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-toolbox-viem": "^0.0.1",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@types/node": "^20.11.19",
+    "dotenv": "^16.4.4",
+    "hardhat": "^2.19.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "viem": "^2.7.9"
   }
 }
